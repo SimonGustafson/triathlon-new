@@ -3,6 +3,7 @@ import matter from 'gray-matter';
 import { marked } from 'marked';
 
 export interface Review {
+  slug: string;
   title: string;
   date: string;
   image: string;
