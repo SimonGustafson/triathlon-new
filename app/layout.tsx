@@ -1,9 +1,15 @@
 import { ReactNode } from "react";
 import NavBar from "../components/NavBar";
 import { orbitron, exo2 } from "./fonts";
-
 import "./globals.css"
 
+export const metadata = {
+  title: {
+    default: "Säter Triathlon",
+    template: "%s | Säter Triathlon",
+  },
+  description: "Säter Triathlon",
+}
 interface LayoutProps {
   children: ReactNode;
 }
