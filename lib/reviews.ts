@@ -18,7 +18,7 @@ export async function getFeaturedReview() {
 export async function getReview(slug: string): Promise<Review> {
   const text = await readFile(`./content/reviews/${slug}.md`, 'utf8');
   const { content, data: { title, date, image } } = matter(text);
-  const body = marked(content);
+  const body = await marked(content);
   return { slug, title, date, image, body };
 }
 
